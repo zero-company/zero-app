@@ -1,7 +1,7 @@
 {
   "build": {
-    "distDir": ["../../index.html"],
-    "devPath": ["../../index.html"]
+    "distDir": ["src-html"],
+    "devPath": ["src-html"]
   },
   "package": {
     "productName": "zero-app"
