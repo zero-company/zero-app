@@ -1,0 +1,17 @@
+[package]
+name = "zero-app"
+version = { workspace = true }
+edition = "2021"
+rust-version = "1.69"
+
+[build-dependencies]
+tauri-build = { workspace = true }
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+tauri = { workspace = true }
+zero-app-core = { path = "../zero-app-core" }
+
+[features]
+custom-protocol = [ "tauri/custom-protocol" ]
