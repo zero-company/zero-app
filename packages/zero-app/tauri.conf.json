@@ -1,7 +1,8 @@
 {
   "build": {
     "distDir": ["src-html"],
-    "devPath": ["src-html"]
+    "devPath": ["src-html"],
+    "withGlobalTauri": true
   },
   "package": {
     "productName": "zero-app"
