@@ -1,7 +1,15 @@
 {
   "build": {
-    "distDir": ["src-html"],
-    "devPath": ["src-html"],
+    "beforeDevCommand": {
+      "script": "trunk --config=packages/zero-app-yew/Trunk.toml serve",
+      "cwd": "../../"
+    },
+    "beforeBuildCommand": {
+      "script": "trunk --config=packages/zero-app-yew/Trunk.toml build",
+      "cwd": "../../"
+    },
+    "devPath": "http://localhost:1420",
+    "distDir": ["packages/zero-app-yew/dist"],
     "withGlobalTauri": true
   },
   "package": {
