@@ -9,11 +9,12 @@
       "cwd": "../../"
     },
     "devPath": "http://localhost:1420",
-    "distDir": ["packages/zero-app-yew/dist"],
+    "distDir": ["../../packages/zero-app-yew/dist"],
     "withGlobalTauri": true
   },
   "package": {
-    "productName": "zero-app"
+    "productName": "zero-app",
+    "version": "1.0.0"
   },
   "tauri": {
     "allowlist": {
