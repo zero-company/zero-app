@@ -3,11 +3,10 @@
 
 #[tauri::command]
 fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
+    zero_app_core::greet(&name)
 }
 
 fn main() {
-    zero_app_core::run();
     tauri::Builder::default()
         .invoke_handler(tauri::generate_handler![greet])
         .run(tauri::generate_context!())

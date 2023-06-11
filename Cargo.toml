@@ -2,7 +2,8 @@
 members = [
   "packages/zero-app-core",
   "packages/zero-app",
-  "packages/zero-app-yew"
+  "packages/zero-app-yew",
+  "packages/zero-app-wasm"
 ]
 
 [workspace.package]
