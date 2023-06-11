@@ -1,11 +1,11 @@
 {
   "build": {
     "beforeDevCommand": {
-      "script": "trunk --config=packages/zero-app-yew/Trunk.toml serve",
+      "script": "wasm-pack build packages/zero-app-wasm --target web && trunk --config=packages/zero-app-yew/Trunk.toml serve",
       "cwd": "../../"
     },
     "beforeBuildCommand": {
-      "script": "trunk --config=packages/zero-app-yew/Trunk.toml build",
+      "script": "wasm-pack build packages/zero-app-wasm --target web && trunk --config=packages/zero-app-yew/Trunk.toml build",
       "cwd": "../../"
     },
     "devPath": "http://localhost:1420",
