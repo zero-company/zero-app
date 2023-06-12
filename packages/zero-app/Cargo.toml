@@ -8,7 +8,7 @@ default-run = "run"
 
 [[bin]]
 name = "run"
-path = "src/bin/run.rs"
+path = "run.rs"
 
 [build-dependencies]
 tauri-build = { workspace = true }
