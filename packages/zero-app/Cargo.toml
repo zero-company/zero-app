@@ -3,12 +3,12 @@ name = "zero-app"
 version = { workspace = true }
 edition = "2021"
 rust-version = "1.69"
-build = "build.rs"
+build = "bin/build.rs"
 default-run = "run"
 
 [[bin]]
 name = "run"
-path = "run.rs"
+path = "bin/run.rs"
 
 [build-dependencies]
 tauri-build = { workspace = true }
