@@ -5,7 +5,7 @@
       "cwd": "../../"
     },
     "beforeBuildCommand": {
-      "script": "wasm-pack build packages/zero-app-wasm --target web && trunk --config=packages/zero-app-yew/Trunk.toml build",
+      "script": "wasm-pack build packages/zero-app-wasm --target web && trunk --config=packages/zero-app-yew/Trunk.toml build --release",
       "cwd": "../../"
     },
     "devPath": "http://localhost:1420",
