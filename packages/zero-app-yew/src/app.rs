@@ -1,5 +1,6 @@
 use serde::{Deserialize, Serialize};
 use serde_wasm_bindgen::to_value;
+use std::env;
 use wasm_bindgen::prelude::*;
 use wasm_bindgen_futures::spawn_local;
 use yew::prelude::*;
@@ -17,6 +18,8 @@ struct GreetArgs<'a> {
 
 #[function_component(App)]
 pub fn app() -> Html {
+    let env = env!("CARGO_MANIFEST_DIR");
+
     let greet_input_ref = use_node_ref();
 
     let name = use_state(|| String::new());
@@ -85,7 +88,7 @@ pub fn app() -> Html {
                 <input id="greet-input" ref={greet_input_ref} placeholder="Enter a name..." />
                 <button type="submit">{"Greet"}</button>
             </form>
-
+            <p><b>{ &env }</b></p>
             <p><b>{ &*greet_msg }</b></p>
         </main>
     }
