@@ -1,6 +1,0 @@
-[package]
-name = "zero-app-core"
-version = { workspace = true }
-edition = "2021"
-
-[dependencies]
