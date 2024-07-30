@@ -1,5 +1,5 @@
 {
-  "name": "zero-app",
+  "name": "@zero-company/zero-app-monorepo",
   "private": true,
   "scripts": {
     "build": "turbo run build",
