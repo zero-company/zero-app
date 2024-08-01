@@ -22,14 +22,8 @@ function App() {
         {/*
          <ModeToggle />
         */}
-        <h1>Welcome to Tauri!</h1>
 
-        <Calendar
-          mode='single'
-          selected={date}
-          onSelect={setDate}
-          className='rounded-md border'
-        />
+        <img src='/zero-logo-v1.svg' alt='O' />
 
         <div className='row'>
           <a href='https://vitejs.dev' target='_blank'>
@@ -42,8 +36,6 @@ function App() {
             <img src={reactLogo} className='logo react' alt='React logo' />
           </a>
         </div>
-
-        <p>Click on the Tauri, Vite, and React logos to learn more.</p>
 
         <form
           className='row'
