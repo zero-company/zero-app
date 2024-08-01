@@ -18,48 +18,61 @@ import {
 import { Input } from '@/components/ui/input'
 
 const formSchema = z.object({
-  name: z.string().min(2).max(50),
+  firstname: z.string().min(2).max(50),
+  lastname: z.string().min(2).max(50),
 })
 
 export const Greet = () => {
-  const [name, setName] = useState('')
   const [date, setDate] = useState<Date | undefined>(new Date())
+  const [greetMsg, setGreetMsg] = useState('')
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: '',
+      firstname: '',
+      lastname: '',
     },
   })
 
-  // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values)
-  }
-
-  const [greetMsg, setGreetMsg] = useState('')
-  async function greet() {
-    setGreetMsg(await invoke('greet', { name }))
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    setGreetMsg(
+      await invoke('greet', { name: values.firstname + ' ' + values.lastname }),
+    )
   }
 
   return (
     <>
-      <form
-        onSubmit={e => {
-          e.preventDefault()
-          greet()
-        }}
-      >
-        <input
-          id='greet-input'
-          onChange={e => setName(e.currentTarget.value)}
-          placeholder='Enter a name...'
-        />
-        <button type='submit'>Greet</button>
-      </form>
-
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
+          <FormField
+            control={form.control}
+            name='firstname'
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>FirstName</FormLabel>
+                <FormControl>
+                  <Input placeholder='' {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name='lastname'
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>LastName</FormLabel>
+                <FormControl>
+                  <Input placeholder='' {...field} />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <Button type='submit'>Submit</Button>
+        </form>
+      </Form>
       <p>{greetMsg}</p>
     </>
   )
