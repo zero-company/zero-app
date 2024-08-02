@@ -1,3 +1,3 @@
-package com.zero.app
+package com.zerocompany.app
 
 class MainActivity : TauriActivity()
