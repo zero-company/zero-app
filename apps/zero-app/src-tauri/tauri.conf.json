@@ -1,19 +1,21 @@
 {
   "productName": "zero-app",
-  "version": "0.0.1",
-  "identifier": "com.zerocompany.app",
+  "version": "0.1.0",
+  "identifier": "com.tauri.dev",
   "build": {
+    "frontendDist": "../out",
+    "devUrl": "http://localhost:3000",
     "beforeDevCommand": "pnpm dev",
-    "devUrl": "http://localhost:1420",
-    "beforeBuildCommand": "pnpm build",
-    "frontendDist": "../dist"
+    "beforeBuildCommand": "pnpm build"
   },
   "app": {
     "windows": [
       {
         "title": "zero-app",
         "width": 800,
-        "height": 600
+        "height": 600,
+        "resizable": true,
+        "fullscreen": false
       }
     ],
     "security": {
@@ -30,5 +32,6 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ]
-  }
+  },
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json"
 }
