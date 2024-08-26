@@ -1,6 +1,6 @@
 'use client'
 import { AppLayout, Icon } from '@zero-company/zero-lib-react'
-import { LuHome } from 'react-icons/lu'
+import { LuList, LuHome } from 'react-icons/lu'
 import { GlobalSidebarTabs } from '@/components'
 
 type Props = {
@@ -14,7 +14,7 @@ export default function Layout({ children }: Props) {
         body={children}
         header={
           <div className='flex-1 p-2'>
-            <p>zero</p>
+            <p>docs</p>
           </div>
         }
         sidebarTabs={{
@@ -24,6 +24,11 @@ export default function Layout({ children }: Props) {
               id: 'home',
               icon: <Icon reactIcon={<LuHome />} />,
               content: <div>home</div>,
+            },
+            {
+              id: 'outline',
+              icon: <Icon reactIcon={<LuList />} />,
+              content: <div>outline</div>,
             },
           ],
           bottom: [...GlobalSidebarTabs],
