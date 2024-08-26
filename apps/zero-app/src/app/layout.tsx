@@ -3,8 +3,9 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
 import { ThemeProvider } from '@/components/theme-provider'
+import { TooltipProvider } from '@/components/ui/tooltip'
 
-// const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] })
 const fontSans = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
@@ -22,19 +23,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body
-        className={cn(
-          //inter.className,
-          fontSans.variable,
-        )}
-      >
+      <body className={cn(fontSans.variable)}>
         <ThemeProvider
           attribute='class'
           defaultTheme='dark'
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <TooltipProvider>{children}</TooltipProvider>
         </ThemeProvider>
       </body>
     </html>
