@@ -14,16 +14,18 @@ export const GlobalSidebarTabs = [
     icon: <Icon reactIcon={<LuLayoutGrid />} />,
     content: (
       <>
-        <div className='p-2'>apps</div>
-        <div className='p-2'>
-          <Link href='/'>Root</Link>
-        </div>
-        <div className='p-2'>
-          <Link href='/zero'>Zero</Link>
-        </div>
-        <div className='p-2'>
-          <Link href='/docs'>Docs</Link>
-        </div>
+        <Link href='/zero' className='block' prefetch>
+          <div className='p-2 space-y-1'>
+            <h2 className='font-semibold text-xs text-white'>/zero</h2>
+            <p className='text-xs'>About our Open Source Team</p>
+          </div>
+        </Link>
+        <Link href='/docs' className='block' prefetch>
+          <div className='p-2 space-y-1'>
+            <h2 className='font-semibold text-xs text-white'>/docs</h2>
+            <p className='text-xs'>Open source community documents</p>
+          </div>
+        </Link>
       </>
     ),
   },
