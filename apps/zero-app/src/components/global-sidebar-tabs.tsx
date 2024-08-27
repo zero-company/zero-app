@@ -16,13 +16,17 @@ export const GlobalSidebarTabs = [
       <>
         <Link href='/zero' className='block' prefetch>
           <div className='p-2 space-y-1'>
-            <h2 className='font-semibold text-xs text-white'>/zero</h2>
+            <h2 className='font-semibold text-xs text-white tracking-wider'>
+              /zero
+            </h2>
             <p className='text-xs'>About our Open Source Team</p>
           </div>
         </Link>
         <Link href='/docs' className='block' prefetch>
           <div className='p-2 space-y-1'>
-            <h2 className='font-semibold text-xs text-white'>/docs</h2>
+            <h2 className='font-semibold text-xs text-white tracking-wider'>
+              /docs
+            </h2>
             <p className='text-xs'>Open source community documents</p>
           </div>
         </Link>
