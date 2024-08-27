@@ -27,8 +27,8 @@ importers:
         specifier: ^1.1.2
         version: 1.1.2(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@zero-company/zero-lib-react':
-        specifier: ^0.1.6
-        version: 0.1.6(@types/react-dom@18.3.0)(@types/react@18.3.3)(tailwindcss@3.4.7)(webpack@5.94.0)
+        specifier: ^0.1.8
+        version: 0.1.8(@types/react-dom@18.3.0)(@types/react@18.3.3)(tailwindcss@3.4.7)(webpack@5.94.0)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -1853,8 +1853,8 @@ packages:
   '@xtuc/long@4.2.2':
     resolution: {integrity: sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==}
 
-  '@zero-company/zero-lib-react@0.1.6':
-    resolution: {integrity: sha512-lugD8sZWsS7p2siIrNpdBzZZmH1Fja3JbyWdf6Ng46U4ckli6Jd57UR3dN2/+s2LX1hpgmdgtg+zcgvA16B03Q==}
+  '@zero-company/zero-lib-react@0.1.8':
+    resolution: {integrity: sha512-lXmAKq2HLP5Mp8vgAv+VBylMBaJFNpTnc+WrfWVMnIYzr9nCLpg5chhLiI5hnQCDOdasw8zQ0JEz0KCo3HFejA==}
 
   abab@2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
@@ -6786,7 +6786,7 @@ snapshots:
 
   '@xtuc/long@4.2.2': {}
 
-  '@zero-company/zero-lib-react@0.1.6(@types/react-dom@18.3.0)(@types/react@18.3.3)(tailwindcss@3.4.7)(webpack@5.94.0)':
+  '@zero-company/zero-lib-react@0.1.8(@types/react-dom@18.3.0)(@types/react@18.3.3)(tailwindcss@3.4.7)(webpack@5.94.0)':
     dependencies:
       '@mdx-js/loader': 3.0.1(webpack@5.94.0)
       '@mdx-js/react': 3.0.1(@types/react@18.3.3)(react@18.3.1)
