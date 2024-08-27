@@ -7,6 +7,7 @@ import {
   LuLayoutGrid,
 } from 'react-icons/lu'
 import Link from 'next/link'
+import { AppsTabContent } from './apps-tab-content'
 
 export const GlobalSidebarTabs = [
   {
@@ -14,7 +15,7 @@ export const GlobalSidebarTabs = [
     icon: <Icon reactIcon={<LuLayoutGrid />} />,
     content: (
       <>
-        <Link href='/zero' className='block' prefetch>
+        <Link href='/zero' id='/zero' className='block' prefetch>
           <div className='p-2 space-y-1'>
             <h2 className='font-semibold text-xs text-white tracking-wider'>
               /zero
@@ -22,7 +23,7 @@ export const GlobalSidebarTabs = [
             <p className='text-xs'>About our Open Source Team</p>
           </div>
         </Link>
-        <Link href='/docs' className='block' prefetch>
+        <Link href='/docs' id='/docs' className='block' prefetch>
           <div className='p-2 space-y-1'>
             <h2 className='font-semibold text-xs text-white tracking-wider'>
               /docs
@@ -30,6 +31,7 @@ export const GlobalSidebarTabs = [
             <p className='text-xs'>Open source community documents</p>
           </div>
         </Link>
+        <AppsTabContent />
       </>
     ),
   },
