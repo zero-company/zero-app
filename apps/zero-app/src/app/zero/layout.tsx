@@ -35,6 +35,7 @@ export default function Layout({ children }: Props) {
                 size='sm'
                 className='text-xs gap-2 justify-start h-8 px-2'
                 variant='ghost'
+                disabled
               >
                 <IconV2 reactIcon={<LuHome />} size='sm' /> Browse
               </Button>
@@ -42,6 +43,7 @@ export default function Layout({ children }: Props) {
                 size='sm'
                 className='text-xs gap-2 justify-start h-8 px-2'
                 variant='ghost'
+                disabled
               >
                 <IconV2 reactIcon={<LuList />} size='sm' /> Outline
               </Button>
@@ -49,7 +51,12 @@ export default function Layout({ children }: Props) {
 
             <Menu
               options={[
-                { name: 'Apps', icon: <LuLayoutGrid />, href: '/apps' },
+                {
+                  name: 'Apps',
+                  icon: <LuLayoutGrid />,
+                  href: '/apps',
+                  disabled: true,
+                },
                 {
                   name: 'Search',
                   icon: <LuSearch />,
