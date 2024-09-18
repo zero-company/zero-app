@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss'
 import { fontFamily } from 'tailwindcss/defaultTheme'
+import { CUSTOM_COLORS } from '@zero-company/zero-lib-react'
 
 const config = {
   darkMode: ['class'],
@@ -24,6 +25,7 @@ const config = {
         sans: ['var(--font-sans)', ...fontFamily.sans],
       },
       colors: {
+        ...CUSTOM_COLORS,
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
