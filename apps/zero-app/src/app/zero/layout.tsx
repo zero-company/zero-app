@@ -30,25 +30,22 @@ export default function Layout({ children }: Props) {
         header={<Header />}
         sidebar={
           <>
-            <div className='flex flex-col items-start p-1 *:w-full'>
-              <Button
-                size='sm'
-                className='text-xs gap-2 justify-start h-8 px-2'
-                variant='ghost'
-                disabled
-              >
-                <IconV2 reactIcon={<LuHome />} size='sm' /> Browse
-              </Button>
-              <Button
-                size='sm'
-                className='text-xs gap-2 justify-start h-8 px-2'
-                variant='ghost'
-                disabled
-              >
-                <IconV2 reactIcon={<LuList />} size='sm' /> Outline
-              </Button>
-            </div>
-
+            <Menu
+              options={[
+                {
+                  name: 'Browse',
+                  icon: <LuHome />,
+                  href: '/browse',
+                  disabled: true,
+                },
+                {
+                  name: 'Outline',
+                  icon: <LuList />,
+                  href: '/outline',
+                  disabled: true,
+                },
+              ]}
+            />
             <Menu
               options={[
                 {

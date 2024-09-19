@@ -17,6 +17,15 @@ importers:
 
   apps/zero-app:
     dependencies:
+      '@mdx-js/loader':
+        specifier: ^3.0.1
+        version: 3.0.1(webpack@5.94.0)
+      '@mdx-js/react':
+        specifier: ^3.0.1
+        version: 3.0.1(@types/react@18.3.7)(react@18.3.1)
+      '@next/mdx':
+        specifier: ^14.2.12
+        version: 14.2.12(@mdx-js/loader@3.0.1(webpack@5.94.0))(@mdx-js/react@3.0.1(@types/react@18.3.7)(react@18.3.1))
       '@radix-ui/react-dropdown-menu':
         specifier: ^2.1.1
         version: 2.1.1(@types/react-dom@18.3.0)(@types/react@18.3.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -26,6 +35,12 @@ importers:
       '@radix-ui/react-tooltip':
         specifier: ^1.1.2
         version: 1.1.2(@types/react-dom@18.3.0)(@types/react@18.3.7)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@sindresorhus/slugify':
+        specifier: ^2.2.1
+        version: 2.2.1
+      '@types/mdx':
+        specifier: ^2.0.13
+        version: 2.0.13
       '@zero-company/zero-lib-react':
         specifier: ^0.1.11
         version: 0.1.11(@types/react-dom@18.3.0)(@types/react@18.3.7)(tailwindcss@3.4.12)(webpack@5.94.0)
@@ -159,7 +174,7 @@ importers:
         version: 18.3.0
       '@vitejs/plugin-react':
         specifier: ^4.2.1
-        version: 4.3.1(vite@5.4.6(@types/node@22.5.5))
+        version: 4.3.1(vite@5.4.6(@types/node@22.5.5)(terser@5.33.0))
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.20(postcss@8.4.47)
@@ -177,7 +192,7 @@ importers:
         version: 5.6.2
       vite:
         specifier: ^5.3.1
-        version: 5.4.6(@types/node@22.5.5)
+        version: 5.4.6(@types/node@22.5.5)(terser@5.33.0)
 
   packages/config-eslint:
     devDependencies:
@@ -1908,6 +1923,14 @@ packages:
 
   '@sinclair/typebox@0.27.8':
     resolution: {integrity: sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==}
+
+  '@sindresorhus/slugify@2.2.1':
+    resolution: {integrity: sha512-MkngSCRZ8JdSOCHRaYd+D01XhvU3Hjy6MGl06zhOk614hp9EOAp5gIkBeQg7wtmxpitU6eAL4kdiRMcJa2dlrw==}
+    engines: {node: '>=12'}
+
+  '@sindresorhus/transliterate@1.6.0':
+    resolution: {integrity: sha512-doH1gimEu3A46VX6aVxpHTeHrytJAG6HgdxntYnCFiIFHEM/ZGpG8KiZGBChchjQmG0XFIBL552kBTjVcMZXwQ==}
+    engines: {node: '>=12'}
 
   '@sinonjs/commons@3.0.1':
     resolution: {integrity: sha512-K3mCHKQ9sVh8o1C9cxkwxaOmXoAMlDxC1mYyHrjqOWEcBjYr76t96zL2zlj5dUGZ3HSw240X1qgH3Mjf1yJWpQ==}
@@ -7504,6 +7527,15 @@ snapshots:
 
   '@sinclair/typebox@0.27.8': {}
 
+  '@sindresorhus/slugify@2.2.1':
+    dependencies:
+      '@sindresorhus/transliterate': 1.6.0
+      escape-string-regexp: 5.0.0
+
+  '@sindresorhus/transliterate@1.6.0':
+    dependencies:
+      escape-string-regexp: 5.0.0
+
   '@sinonjs/commons@3.0.1':
     dependencies:
       type-detect: 4.0.8
@@ -7927,14 +7959,14 @@ snapshots:
       - jest
       - supports-color
 
-  '@vitejs/plugin-react@4.3.1(vite@5.4.6(@types/node@22.5.5))':
+  '@vitejs/plugin-react@4.3.1(vite@5.4.6(@types/node@22.5.5)(terser@5.33.0))':
     dependencies:
       '@babel/core': 7.25.2
       '@babel/plugin-transform-react-jsx-self': 7.24.7(@babel/core@7.25.2)
       '@babel/plugin-transform-react-jsx-source': 7.24.7(@babel/core@7.25.2)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.4.6(@types/node@22.5.5)
+      vite: 5.4.6(@types/node@22.5.5)(terser@5.33.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -12367,7 +12399,7 @@ snapshots:
       d3-time: 3.1.0
       d3-timer: 3.0.1
 
-  vite@5.4.6(@types/node@22.5.5):
+  vite@5.4.6(@types/node@22.5.5)(terser@5.33.0):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.47
@@ -12375,6 +12407,7 @@ snapshots:
     optionalDependencies:
       '@types/node': 22.5.5
       fsevents: 2.3.3
+      terser: 5.33.0
 
   w3c-xmlserializer@4.0.0:
     dependencies:
