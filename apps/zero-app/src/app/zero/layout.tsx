@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import {
   AppLayoutV2,
   IconV2,
@@ -33,16 +34,19 @@ export default function Layout({ children }: Props) {
             <Menu
               options={[
                 {
-                  name: 'Browse',
+                  name: 'Home',
                   icon: <LuHome />,
-                  href: '/browse',
-                  disabled: true,
+                  href: '/zero',
                 },
                 {
-                  name: 'Outline',
+                  name: 'About Zero',
                   icon: <LuList />,
-                  href: '/outline',
-                  disabled: true,
+                  href: '/zero/about-zero',
+                },
+                {
+                  name: 'About App',
+                  icon: <LuList />,
+                  href: '/zero/about-app',
                 },
               ]}
             />
@@ -74,6 +78,9 @@ export default function Layout({ children }: Props) {
                 },
               ]}
             />
+            <Link href='/zero'>home</Link>
+            <Link href='/zero/about-app'>about-app</Link>
+            <Link href='/zero/about-zero'>about-zero</Link>
           </>
         }
         footer={
