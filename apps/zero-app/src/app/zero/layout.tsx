@@ -34,53 +34,50 @@ export default function Layout({ children }: Props) {
             <Menu
               options={[
                 {
-                  name: 'Home',
+                  children: 'Home',
                   icon: <LuHome />,
                   href: '/zero',
                 },
                 {
-                  name: 'About Zero',
-                  icon: <LuList />,
-                  href: '/zero/about-zero',
-                },
-                {
-                  name: 'About App',
+                  children: 'App',
                   icon: <LuList />,
                   href: '/zero/about-app',
+                },
+                {
+                  children: 'Zero',
+                  icon: <LuList />,
+                  href: '/zero/about-zero',
                 },
               ]}
             />
             <Menu
               options={[
                 {
-                  name: 'Apps',
+                  children: 'Apps',
                   icon: <LuLayoutGrid />,
                   href: '/apps',
                   disabled: true,
                 },
                 {
-                  name: 'Search',
+                  children: 'Search',
                   icon: <LuSearch />,
                   href: '/search',
                   disabled: true,
                 },
                 {
-                  name: 'User',
+                  children: 'User',
                   icon: <LuUserCircle2 />,
                   href: '/user',
                   disabled: true,
                 },
                 {
-                  name: 'Settings',
+                  children: 'Settings',
                   icon: <LuSettings />,
                   href: '/settings',
                   disabled: true,
                 },
               ]}
             />
-            <Link href='/zero'>home</Link>
-            <Link href='/zero/about-app'>about-app</Link>
-            <Link href='/zero/about-zero'>about-zero</Link>
           </>
         }
         footer={
