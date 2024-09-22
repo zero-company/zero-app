@@ -8,6 +8,7 @@ import {
   SupportCard,
   Button,
   Menu,
+  ZeroLogo,
 } from '@zero-company/zero-lib-react'
 import {
   LuList,
@@ -45,7 +46,7 @@ export default function Layout({ children }: Props) {
                 },
                 {
                   children: 'Zero',
-                  icon: <LuList />,
+                  icon: <IconV2 reactIcon={<ZeroLogo />} size='sm' />,
                   href: '/zero/about-zero',
                 },
               ]}
