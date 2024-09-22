@@ -17,6 +17,8 @@ import {
   LuSettings,
   LuUserCircle2,
   LuSearch,
+  LuBookOpen,
+  LuInfo,
 } from 'react-icons/lu'
 import { GlobalSidebarTabs } from '@/components'
 
@@ -35,19 +37,24 @@ export default function Layout({ children }: Props) {
             <Menu
               options={[
                 {
-                  children: 'Home',
+                  children: 'Index',
                   icon: <LuHome />,
                   href: '/zero',
+                },
+                {
+                  children: 'Docs',
+                  icon: <LuBookOpen />,
+                  href: '/docs',
+                },
+                {
+                  children: 'Advanced Search',
+                  icon: <LuSearch />,
+                  href: '/advanced-search',
                 },
                 {
                   children: 'App',
                   icon: <LuList />,
                   href: '/zero/about-app',
-                },
-                {
-                  children: 'Zero',
-                  icon: <IconV2 reactIcon={<ZeroLogo />} size='sm' />,
-                  href: '/zero/about-zero',
                 },
               ]}
             />
@@ -60,12 +67,6 @@ export default function Layout({ children }: Props) {
                   disabled: true,
                 },
                 {
-                  children: 'Search',
-                  icon: <LuSearch />,
-                  href: '/search',
-                  disabled: true,
-                },
-                {
                   children: 'User',
                   icon: <LuUserCircle2 />,
                   href: '/user',
@@ -75,6 +76,12 @@ export default function Layout({ children }: Props) {
                   children: 'Settings',
                   icon: <LuSettings />,
                   href: '/settings',
+                  disabled: true,
+                },
+                {
+                  children: 'About',
+                  icon: <LuInfo />,
+                  href: '/zero/about',
                   disabled: true,
                 },
               ]}
