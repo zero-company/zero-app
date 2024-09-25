@@ -1,4 +1,5 @@
 {
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "productName": "zero-app",
   "version": "0.1.1",
   "identifier": "com.zerocompany.app",
@@ -33,6 +34,5 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ]
-  },
-  "$schema": "../node_modules/@tauri-apps/cli/schema.json"
+  }
 }
