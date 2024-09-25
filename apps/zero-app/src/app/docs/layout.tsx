@@ -46,30 +46,6 @@ export default function Layout({ children }: Props) {
                 <IconV2 reactIcon={<LuList />} size='sm' /> Outline
               </Button>
             </div>
-
-            <Menu
-              options={[
-                { name: 'Apps', icon: <LuLayoutGrid />, href: '/apps' },
-                {
-                  name: 'Search',
-                  icon: <LuSearch />,
-                  href: '/search',
-                  disabled: true,
-                },
-                {
-                  name: 'User',
-                  icon: <LuUserCircle2 />,
-                  href: '/user',
-                  disabled: true,
-                },
-                {
-                  name: 'Settings',
-                  icon: <LuSettings />,
-                  href: '/settings',
-                  disabled: true,
-                },
-              ]}
-            />
           </>
         }
         footer={
