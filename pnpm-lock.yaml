@@ -42,8 +42,8 @@ importers:
         specifier: ^2.0.13
         version: 2.0.13
       '@zero-company/zero-lib-react':
-        specifier: ^0.1.13
-        version: 0.1.13(@types/react-dom@18.3.0)(@types/react@18.3.7)(tailwindcss@3.4.12)(webpack@5.94.0)
+        specifier: ^0.1.14
+        version: 0.1.14(@types/react-dom@18.3.0)(@types/react@18.3.7)(tailwindcss@3.4.12)(webpack@5.94.0)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -2436,8 +2436,8 @@ packages:
   '@xtuc/long@4.2.2':
     resolution: {integrity: sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==}
 
-  '@zero-company/zero-lib-react@0.1.13':
-    resolution: {integrity: sha512-8MxU7/m5G3WmxvOUGVKC8p2gDs6k2PHFAGvHfnH/ghjUv+xUV6RmNbMwNXXQpzEqQ7S1aMwSUNJuCz4cRoRpnw==}
+  '@zero-company/zero-lib-react@0.1.14':
+    resolution: {integrity: sha512-XYZzGA4kuR5lWVEzHqw8JsJYxel6Y+tSCOp62s1+ygYejy4wZTfJrRYH/wAa7mMF1GKZzzVxUOvI40edcGEFVw==}
 
   abab@2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
@@ -8201,7 +8201,7 @@ snapshots:
 
   '@xtuc/long@4.2.2': {}
 
-  '@zero-company/zero-lib-react@0.1.13(@types/react-dom@18.3.0)(@types/react@18.3.7)(tailwindcss@3.4.12)(webpack@5.94.0)':
+  '@zero-company/zero-lib-react@0.1.14(@types/react-dom@18.3.0)(@types/react@18.3.7)(tailwindcss@3.4.12)(webpack@5.94.0)':
     dependencies:
       '@hookform/resolvers': 3.9.0(react-hook-form@7.53.0(react@18.3.1))
       '@mdx-js/loader': 3.0.1(webpack@5.94.0)
