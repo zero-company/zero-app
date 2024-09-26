@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang='en' suppressHydrationWarning>
       <body className={cn(fontSans.variable)}>
-        <main>
+        <main className='flex w-screen h-screen'>
           <ThemeProvider
             attribute='class'
             defaultTheme='dark'
