@@ -120,6 +120,7 @@ export default function Layout({ children }: Props) {
                           children: 'Account',
                           icon: <LuUserCircle2 />,
                           href: `/${pathnameDepth1}/account`,
+                          disabled: true,
                         },
                         {
                           children: 'Sign Up',
