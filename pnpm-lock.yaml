@@ -42,8 +42,8 @@ importers:
         specifier: ^2.0.13
         version: 2.0.13
       '@zero-company/zero-lib-react':
-        specifier: ^0.1.16
-        version: 0.1.16(@types/react-dom@18.3.0)(@types/react@18.3.7)(tailwindcss@3.4.12)(webpack@5.94.0)
+        specifier: ^0.1.17
+        version: 0.1.17(@types/react-dom@18.3.0)(@types/react@18.3.7)(tailwindcss@3.4.12)(webpack@5.94.0)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -2441,8 +2441,8 @@ packages:
   '@xtuc/long@4.2.2':
     resolution: {integrity: sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==}
 
-  '@zero-company/zero-lib-react@0.1.16':
-    resolution: {integrity: sha512-GZ13jmYJFyww1Qcasqr8y9k5i23W/rh8eWVsg4QWo0Z4AaKebqLMs8Z8L2mDVJZAZbQMXfkGup2AyVXtvrUCUA==}
+  '@zero-company/zero-lib-react@0.1.17':
+    resolution: {integrity: sha512-3H2NfGChyfCvOOb4avGEdGNvVwv5qK+cEQYbUoMW0HwaU6yWIZrpvdql0zJKfhAbXlFe6t6mZLgx3C2/Yctp/g==}
 
   abab@2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
@@ -8210,7 +8210,7 @@ snapshots:
 
   '@xtuc/long@4.2.2': {}
 
-  '@zero-company/zero-lib-react@0.1.16(@types/react-dom@18.3.0)(@types/react@18.3.7)(tailwindcss@3.4.12)(webpack@5.94.0)':
+  '@zero-company/zero-lib-react@0.1.17(@types/react-dom@18.3.0)(@types/react@18.3.7)(tailwindcss@3.4.12)(webpack@5.94.0)':
     dependencies:
       '@hookform/resolvers': 3.9.0(react-hook-form@7.53.0(react@18.3.1))
       '@mdx-js/loader': 3.0.1(webpack@5.94.0)
@@ -9132,7 +9132,7 @@ snapshots:
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(eslint@8.57.1))(eslint@8.57.1)
-      eslint-plugin-import: 2.30.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
+      eslint-plugin-import: 2.30.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1)
       eslint-plugin-jsx-a11y: 6.10.0(eslint@8.57.1)
       eslint-plugin-react: 7.36.1(eslint@8.57.1)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.1)
@@ -9195,7 +9195,7 @@ snapshots:
       is-bun-module: 1.2.1
       is-glob: 4.0.3
     optionalDependencies:
-      eslint-plugin-import: 2.30.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
+      eslint-plugin-import: 2.30.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1)
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
       - eslint-import-resolver-node
@@ -9279,7 +9279,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-plugin-import@2.30.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1):
+  eslint-plugin-import@2.30.0(@typescript-eslint/parser@7.2.0(eslint@8.57.1)(typescript@5.6.2))(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8
