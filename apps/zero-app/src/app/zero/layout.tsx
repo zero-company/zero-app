@@ -5,9 +5,8 @@ import {
   IconV2,
   Header,
   Footer,
-  SupportCard,
   Button,
-  Menu,
+  MenuV2,
   ZeroLogo,
   ZERO_LINKS,
   GradientButton,
@@ -18,12 +17,17 @@ import {
   LuLayoutGrid,
   LuSettings,
   LuUserCircle2,
+  LuLogIn,
+  LuLogOut,
+  LuUserPlus,
+  LuSmartphone,
+  LuUser,
   LuSearch,
   LuBookOpen,
   LuInfo,
 } from 'react-icons/lu'
 import { FaFacebookF, FaGithub, FaTwitter, FaGlobe } from 'react-icons/fa6'
-import { GlobalSidebarTabs } from '@/components'
+import { usePathname } from 'next/navigation'
 
 type Props = {
   children: React.ReactNode
@@ -59,6 +63,9 @@ const SocialLinks = () => (
 )
 
 export default function Layout({ children }: Props) {
+  const pathname = usePathname()
+  const pathnameDepth1 = pathname.split('/')[1]
+
   return (
     <>
       <AppLayoutV2
@@ -66,31 +73,27 @@ export default function Layout({ children }: Props) {
         header={<Header />}
         sidebar={
           <>
-            <Menu
+            <MenuV2
               options={[
                 {
                   children: 'Index',
                   icon: <LuHome />,
-                  href: '/zero',
+                  href: `/${pathnameDepth1}`,
                 },
                 {
                   children: 'Docs',
                   icon: <LuBookOpen />,
-                  href: '/docs',
+                  href: `/${pathnameDepth1}/docs`,
+                  disabled: true,
                 },
                 {
                   children: 'Advanced Search',
                   icon: <LuSearch />,
-                  href: '/advanced-search',
-                },
-                {
-                  children: 'App',
-                  icon: <LuList />,
-                  href: '/zero/about-app',
+                  href: `/${pathnameDepth1}/advanced-search`,
                 },
               ]}
             />
-            <Menu
+            <MenuV2
               options={[
                 {
                   children: 'Apps',
@@ -100,9 +103,32 @@ export default function Layout({ children }: Props) {
                 },
                 {
                   children: 'User',
-                  icon: <LuUserCircle2 />,
-                  href: '/user',
-                  disabled: true,
+                  icon: <LuUser />,
+                  subMenu: (
+                    <MenuV2
+                      options={[
+                        {
+                          children: 'Sign In',
+                          icon: <LuLogIn />,
+                          href: `/${pathnameDepth1}/signin`,
+                        },
+                        {
+                          children: 'Sign Out',
+                          icon: <LuLogOut />,
+                        },
+                        {
+                          children: 'Account',
+                          icon: <LuUserCircle2 />,
+                          href: `/${pathnameDepth1}/account`,
+                        },
+                        {
+                          children: 'Sign Up',
+                          icon: <LuUserPlus />,
+                          href: `/${pathnameDepth1}/signup`,
+                        },
+                      ]}
+                    />
+                  ),
                 },
                 {
                   children: 'Settings',
@@ -113,8 +139,22 @@ export default function Layout({ children }: Props) {
                 {
                   children: 'About',
                   icon: <LuInfo />,
-                  href: '/zero/about',
-                  disabled: true,
+                  subMenu: (
+                    <MenuV2
+                      options={[
+                        {
+                          children: 'About App',
+                          icon: <LuSmartphone />,
+                          href: `/${pathnameDepth1}/about-app`,
+                        },
+                        {
+                          children: 'About Zero',
+                          icon: <IconV2 reactIcon={<ZeroLogo />} size='sm' />,
+                          href: `/${pathnameDepth1}/about-zero`,
+                        },
+                      ]}
+                    />
+                  ),
                 },
               ]}
             />
