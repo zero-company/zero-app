@@ -90,6 +90,7 @@ export default function Layout({ children }: Props) {
                   children: 'Advanced Search',
                   icon: <LuSearch />,
                   href: `/${pathnameDepth1}/advanced-search`,
+                  disabled: true,
                 },
               ]}
             />
